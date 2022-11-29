@@ -1,0 +1,21 @@
+{
+  "name": "esbuild-plugin-pug",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/jubeiam/esbuild-plugin-pug.git",
+  "author": "Leszek Stęczniewski",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.16"
+  },
+  "scripts": {
+    "test": "node build.js && cd test && rm out.js && node build.js && diff -q out.js expected.js"
+  }
+}
